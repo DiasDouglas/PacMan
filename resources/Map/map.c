@@ -50,12 +50,6 @@ void movePacman(char command, Map* map, PacMan* pacman){
     }
 }
 
-void moveGhosts(Map* map, Ghost[] ghosts, Position pacmanPosition){
-    for(int i = 0; i < 2; i++){
-        // TODO
-    }
-}
-
 void findPacmanStartPosition(Map* map, PacMan* pacman) {
     for(int i = 0; i < map->rows; i++){
         for(int j = 0; j < map->columns; j++){
@@ -84,7 +78,7 @@ void findGhostsStartPositions(Map* map, Ghost* ghosts) {
     }
 }
 
-void aloccMap(Map* map) {
+void allocMap(Map* map) {
     map->matrix = malloc(sizeof(char*) * map->rows);
 
     for(int i = 0; i < map->rows; i++){
@@ -103,7 +97,7 @@ void readMap(Map* map, PacMan* pacman, Ghost* ghosts) {
 
     fscanf(f, "%d %d", &(map->rows), &(map->columns));
 
-    aloccMap(map);
+    allocMap(map);
 
     for(int i = 0; i < map->rows; i++){
         fscanf(f, "%s", map->matrix[i]);

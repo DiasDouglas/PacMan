@@ -1,0 +1,1 @@
+This is a little project in C, in which I have to deal with a lot of classic C characteristics, like pointers, dynamic memory aloccation, I/O, files, structs and headers.
